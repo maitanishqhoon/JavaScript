@@ -19,6 +19,35 @@
    </div>
 </body>
 <script>
-    
+    // document.getElementById('owl').onclick = function() {
+    //     alert("owl clicked")
+    // }
+     // attachEvent()
+    // jQuery - on
+    //type, timestamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrlkey, shiftkey, keycode
+    // document.getElementById('images').addEventListener('click', function(e) {
+    //     console.log("clicked inside the UL");
+    // }, false)
+    // document.getElementById('owl').addEventListener('click', function(e) {
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+    // document.getElementById('google').addEventListener('click',function(e) {
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+    document.querySelector('#images').addEventListener('click', function(params) {
+        console.log(params.target.parentNode);
+        if (params.target.tagName === 'IMG') {
+            let removeIt = params.target.parentNode
+            removeIt.remove()
+        }
+        
+        //removeIt.parentNode.removeChild(removeIt)
+    }, false)
 </script>
 </html>
